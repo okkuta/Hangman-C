@@ -16,9 +16,11 @@ int main() {
         switch (option) 
         {
             case 1:
-
+                
+                cout<<endl;
                 showDifficulty();
                 cin >> difficulty;
+                cout<<endl;
 
                 if (difficulty < 1 || difficulty > 3)
                 {
@@ -26,8 +28,10 @@ int main() {
                     continue; 
                 }
 
+                cout<<endl;
                 showCategories();
                 cin >> category;
+                cout<<endl;
 
                 if (category < 1 || category > 5)
                  {
@@ -41,6 +45,7 @@ int main() {
             case 2:
 
                 showInstructions();
+                cout<<endl;
                 break; 
 
             case 3:

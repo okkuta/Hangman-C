@@ -98,6 +98,7 @@ void gameLogic(int difficulty, int category)
     vector<char> introducedCharacters;
 
     while (nrOfTries > 0) {
+        cout<<endl;
         cout << "Your word, so far: " << templateWord << endl;
         cout << "Number of tries left: " << nrOfTries << endl;
         cout << "Introduced characters: ";
@@ -120,17 +121,16 @@ void gameLogic(int difficulty, int category)
                 }
             }
         } 
-        else 
-        {
-            nrOfTries--;
-        }
+        --nrOfTries;
 
         if (templateWord == word) 
         {
-            cout << "Congratulations! You've won the game!" << endl;
+            cout <<endl<< "Congratulations! You've won the game!" << endl;
+            cout<<"The word was: "<<word<<endl<<endl;
             return;
         }
     }
 
-    cout << "You lost! The correct word was: " << word << ". Better luck next time!" << endl;
+
+    cout <<endl<< "You lost! The correct word was: " << word << endl<< "Better luck next time!" << endl <<endl;
 }
